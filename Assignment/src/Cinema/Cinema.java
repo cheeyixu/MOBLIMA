@@ -2,7 +2,7 @@ package Cinema;
 
 import java.util.ArrayList;
 
-import Cineplex.Movie;
+import Movie.Movie;
 
 public class Cinema {
 	
@@ -28,6 +28,10 @@ public class Cinema {
 				break;
 			}
 		}
+	}
+	
+	public ArrayList<Movie> getArrayMovie(){
+		return listMovie;
 	}
 	
 	
