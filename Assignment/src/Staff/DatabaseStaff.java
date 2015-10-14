@@ -10,9 +10,23 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-public class DatabaseStaff {
+import Interface.Database;
+
+public class DatabaseStaff implements Database{
 	
-	public static void WriteToDatabase(String filename,ArrayList<Staff> list){
+	
+	public static void main(String args[]){
+		ArrayList list = new ArrayList<Staff>();
+		Staff newStaff = new Staff("EdwardSujono","12345");
+		list.add(newStaff);
+		String filename = "staff.dat";
+		DatabaseStaff dbs = new DatabaseStaff();
+		dbs.WriteToDatabase(filename, list);
+	}
+	
+
+	@Override
+	public void WriteToDatabase(String filename, ArrayList<Object> list) {
 		FileOutputStream fos = null;
 		BufferedOutputStream bos = null;
 		try{
@@ -23,12 +37,12 @@ public class DatabaseStaff {
 			os.close();
 		}catch(IOException e){
 			System.out.println(e.getMessage());
-		}
-	
+		}	
 	}
-	
 
-	public static ArrayList ReadFromDatabase(String filename){
+
+	@Override
+	public ArrayList<Object> ReadFromDatabase(String filename) {
 		ArrayList returnedList = null;
 		FileInputStream fis = null;
 		BufferedInputStream bis = null;
@@ -44,17 +58,6 @@ public class DatabaseStaff {
 			
 		}
 		return returnedList;
-	}
-	
-	
-	public static void main(String args[]){
-		ArrayList list = new ArrayList<Staff>();
-		Staff newStaff = new Staff("EdwardSujono","12345");
-		list.add(newStaff);
-		String filename = "staff.dat";
-		DatabaseStaff.WriteToDatabase(filename, list);
-	
-		
 	}
 	
 }

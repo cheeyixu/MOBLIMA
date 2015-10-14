@@ -6,7 +6,7 @@ import Movie.Movie;
 
 public class Cinema {
 	
-	public String nameCinema = "";
+	private String nameCinema = "";
 	private ArrayList<Movie> listMovie = new ArrayList<Movie>();
 	
 	public Cinema(String nameCinema){
@@ -32,6 +32,14 @@ public class Cinema {
 	
 	public ArrayList<Movie> getArrayMovie(){
 		return listMovie;
+	}
+	
+	public Movie getMovieWithIndex(int index){
+		return listMovie.get(index);
+	}
+	
+	public String getNameCinema(){
+		return this.nameCinema;
 	}
 	
 	
