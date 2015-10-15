@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 import Cinema.Cinema;
 
+//Each of cineplex will have a list of cinema
+
 public class Cineplex implements Serializable{
 	
 	private String nameCineplex="";

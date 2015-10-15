@@ -1,11 +1,12 @@
 package User;
 
-import java.util.Scanner;
-
-import Cineplex.ChoiceException;
-
 public class UserApplication {
-	public void ChooseCineplexForUser(){
+	//Yi Xu start your code from here 
+}
+
+/*This is just reference of my last code that i deleted 
+ * 
+ * 	public void ChooseCineplexForUser(){
 		Scanner scan = new Scanner(System.in);
 		int choiceCineplex =  0;
 		//we are using 3 cineplex from Singapore 
@@ -34,4 +35,4 @@ public class UserApplication {
 		}
 		}
 	}
-}
+ * */

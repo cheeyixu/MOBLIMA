@@ -13,10 +13,11 @@ import Cinema.Cinema;
 import Interface.Database;
 import Movie.Movie;
 
+//Basically this class will make the database for Cineplex Class and read it 
+//configure the initial database value from the Main method
+
 public class CineplexDatabase implements Database{
-	private Cinema currentCinema;
-	private Cineplex currentCineplex =new Cineplex("");
-	private Movie currentMovie ;
+
 	private static Cineplex cathay;
 	private static Cineplex filmgarde;
 	private static Cineplex century;
@@ -41,7 +42,6 @@ public class CineplexDatabase implements Database{
 		listCineplex.get(0).addCinema(CathaySecond);
 		listCineplex.get(0).addCinema(CathayThird);
 		//add movies to the AMK hub cinema
-		
 		listCineplex.add(filmgarde);
 		//later add three more cinema from FilmGarde
 		listCineplex.add(century);
@@ -89,7 +89,12 @@ public class CineplexDatabase implements Database{
 	}
 	
 
-	public void ConfigureCineplexForStaff(){
+	
+	/*
+	 * No need to see this
+	 * 
+	 * 
+	 public void ConfigureCineplexForStaff(){
 		Scanner scan = new Scanner(System.in);
 		int choiceCineplex =  0;
 		//we are using 3 cineplex from Singapore 
@@ -123,7 +128,6 @@ public class CineplexDatabase implements Database{
 		}
 		}
 	}
-	/*
 	public void ConfiguringCinema(){
 		System.out.println("Configuring cinema from "+this.nameCineplex);
 		for(int i = 1; i <= currentCineplex.listCinema.size() ; i++){

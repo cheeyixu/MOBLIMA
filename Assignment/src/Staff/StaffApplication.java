@@ -8,6 +8,7 @@ import Cineplex.Cineplex;
 import Cineplex.CineplexDatabase;
 import Movie.Movie;
 
+//Basically this class will enable staff to configure database of Cineplex and database of User
 public class StaffApplication {
 	
 	private static Cineplex currentCineplex = null;

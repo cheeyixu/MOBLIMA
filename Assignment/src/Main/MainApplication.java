@@ -20,6 +20,7 @@ public class MainApplication {
 		choiceLogin = scan.nextInt();
 		switch(choiceLogin){
 		case 1:
+			//Start User Application here
 			break;
 		case 2:
 			StaffApplication.main(null);
