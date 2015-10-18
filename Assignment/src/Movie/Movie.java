@@ -4,14 +4,18 @@ import java.util.Date;
 
 public class Movie {
 	private String title = "";
-	private double duration = 0;
+	private int duration = 0;
 	private double rating = 0;
 	private String genre = "";
 	private Date time = new Date();
 	
 	
-	public Movie(String title, double duration , double rating , String genre ,Date time){
-		
+	public Movie(String title, int duration , double rating , String genre ,Date time){
+		this.title = title;
+		this.duration = duration;
+		this.rating = rating;
+		this.genre = genre;
+		this.time = time;
 	}
 	
 	//just for quick test i make the simple constructor 
@@ -21,8 +25,8 @@ public class Movie {
 	
 	
 	//getter and setter for title
-	public void SetTitle(){
-		
+	public void SetTitle(String title){
+		this.title = title;
 	}
 	
 	public String getTitle(){
@@ -31,11 +35,11 @@ public class Movie {
 	
 	//getter and setter for duration
 	
-	public void setDuration(double duration){
+	public void setDuration(int duration){
 		this.duration = duration;
 	}
 	
-	public double getDuration(){
+	public int getDuration(){
 		return duration;
 	}
 	
